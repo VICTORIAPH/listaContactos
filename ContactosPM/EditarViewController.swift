@@ -41,7 +41,7 @@ extension EditarViewController: UIImagePickerControllerDelegate, UINavigationCon
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let imagenSeleccionada = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-            imagenEditar.image = imagenSeleccionada
+            recibirImage.image = imagenSeleccionada
         }
         
         picker.dismiss(animated: true)
