@@ -73,10 +73,94 @@
                     <view key="view" contentMode="scaleToFill" id="G0E-5N-dAI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="ZtF-ru-izo">
+                                <rect key="frame" x="10" y="108" width="394" height="734"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YyZ-eo-jdG">
+                                        <rect key="frame" x="137" y="1.5" width="120" height="117"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="8hd-cd-rQd"/>
+                                            <constraint firstAttribute="height" constant="120" id="Ghe-kS-W50"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="eIm-iY-ekG">
+                                        <rect key="frame" x="47" y="200" width="300" height="424"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pEb-79-I8i">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="74.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="telefono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x0l-dP-Omo">
+                                                <rect key="frame" x="0.0" y="116.5" width="300" height="74.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="direccion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FDO-1f-Vvk">
+                                                <rect key="frame" x="0.0" y="233" width="300" height="74.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="corre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UaC-ew-ZSa">
+                                                <rect key="frame" x="0.0" y="349.5" width="300" height="74.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="5FO-qk-oNX"/>
+                                            <constraint firstAttribute="width" constant="300" id="GJX-Ic-NfP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="KgO-x1-v2Z">
+                                        <rect key="frame" x="47" y="704" width="300" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0k-FV-JNX">
+                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <state key="normal" title="Cancelar">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnCancelar:" destination="CBB-4W-dh9" eventType="touchUpInside" id="APa-WJ-0hw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a73-6f-Nfc">
+                                                <rect key="frame" x="174.5" y="0.0" width="125.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Aceptar">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnAceptar:" destination="CBB-4W-dh9" eventType="touchUpInside" id="ykh-QL-qXT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="Vp7-Nk-MBn"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Lhr-KV-fTW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZtF-ru-izo" firstAttribute="leading" secondItem="Lhr-KV-fTW" secondAttribute="leading" constant="10" id="P4e-9H-r61"/>
+                            <constraint firstItem="Lhr-KV-fTW" firstAttribute="bottom" secondItem="ZtF-ru-izo" secondAttribute="bottom" constant="20" id="Wcv-rC-YGZ"/>
+                            <constraint firstItem="ZtF-ru-izo" firstAttribute="top" secondItem="Lhr-KV-fTW" secondAttribute="top" constant="20" id="gOk-s9-MW3"/>
+                            <constraint firstItem="Lhr-KV-fTW" firstAttribute="trailing" secondItem="ZtF-ru-izo" secondAttribute="trailing" constant="10" id="lme-bZ-GLp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Editar" id="TdS-2X-Vsl"/>
+                    <connections>
+                        <outlet property="recibirDireccion" destination="FDO-1f-Vvk" id="yfe-BT-suk"/>
+                        <outlet property="recibirEmail" destination="UaC-ew-ZSa" id="ayk-mN-2gJ"/>
+                        <outlet property="recibirImage" destination="YyZ-eo-jdG" id="LDP-Me-d8l"/>
+                        <outlet property="recibirTele" destination="x0l-dP-Omo" id="QIw-u3-ita"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSa-Qm-XzB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,8 +186,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
