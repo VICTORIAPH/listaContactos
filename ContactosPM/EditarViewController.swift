@@ -16,9 +16,6 @@ class EditarViewController: UIViewController {
     @IBOutlet weak var recibirDireccion: UITextField!
     @IBOutlet weak var recibirEmail: UITextField!
     
-    @IBOutlet weak var btnCancelar: UIButton!
-    
-    @IBOutlet weak var btnAceptar: UIButton!
     //var recibirNombre: String?
     override func viewDidLoad() {
         super.viewDidLoad()
