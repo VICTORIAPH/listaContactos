@@ -32,11 +32,22 @@ class EditarViewController: UIViewController {
     @IBAction func btnAceptar(_ sender: UIButton) {
     }
     
-    extension EditarViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-        func imagePickerController.In(<#parameters#>) -> <#return type#> {
-            <#function body#>
-        }
-    }
+
 
     
+}
+// MARK: - Agregar gestura a la imagen
+extension EditarViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let imagenSeleccionada = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            imagenEditar.image = imagenSeleccionada
+        }
+        
+        picker.dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
 }
